@@ -42,7 +42,7 @@ var DevilPace = DevilPace || {};
             var balloon = game.add.image(-60, -960, 'balloon');
             var tweenBalloon = game.add.tween(balloon).to({y: '20'}, 1800, Phaser.Easing.Sinusoidal.InOut, false, 0, -1, true);
 
-            bigCloud = game.add.image(0, -850, 'big-cloud');
+            bigCloud = game.add.image(-300, -850, 'big-cloud');
 
             var dialog1 = game.add.image(345, -313, 'dialog-1');
             dialog1.scale.set(0);
