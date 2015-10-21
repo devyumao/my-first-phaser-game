@@ -19,7 +19,6 @@ DevilPace.preload = {
         game.load.image('dialog-2', 'img/dialog-2.png');
         game.load.spritesheet('button-1', 'img/button-1.png', 140, 54);
         game.load.spritesheet('button-2', 'img/button-2.png', 140, 54);
-        game.load.image('mask', 'img/mask.png');
         game.load.image('card', 'img/card.png');
     },
     create: function () {

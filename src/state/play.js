@@ -75,12 +75,13 @@ var DevilPace = DevilPace || {};
             var tweenButton1 = game.add.tween(button1.scale).to({x: 1, y: 1}, 500, Phaser.Easing.Back.Out, false);
             var tweenButton2 = game.add.tween(button2.scale).to({x: 1, y: 1}, 500, Phaser.Easing.Back.Out, false);
 
-            var mask = game.add.image(0, -800, 'mask');
-            mask.scale.set(game.world.width, game.world.height);
+            var maskBitmap = game.add.bitmapData(game.width, game.height);
+            maskBitmap.rect(0, 0, maskBitmap.width, maskBitmap.height, '#000');
+            var mask = game.add.image(0, -800, maskBitmap);
             mask.alpha = 0;
-            var tweenMask = game.add.tween(mask).to({alpha: 0.6}, 500, Phaser.Easing.Quadratic.InOut, false);
+            var tweenMask = game.add.tween(mask).to({alpha: 0.5}, 500, Phaser.Easing.Quadratic.InOut, false);
 
-            var card = game.add.image(game.world.width/2, -500, 'card');
+            var card = game.add.image(game.world.width / 2, -500, 'card');
             card.anchor.set(0.5);
             card.alpha = 0;
             var tweenCard = game.add.tween(card).to({alpha: 0.8}, 500, Phaser.Easing.Quadratic.InOut, false);
@@ -119,7 +120,6 @@ var DevilPace = DevilPace || {};
         },
         
         render: function () {
-
         },
 
         moveCloud: function (cloud, pace, interval) {
