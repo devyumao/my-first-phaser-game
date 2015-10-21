@@ -30,7 +30,7 @@ gulp.task('image', function () {
 });
 
 gulp.task('default', [
-    'script:dep',
+    // 'script:dep',
     'script:src',
     'clean:image',
     'image'
